@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Georgia', serif;
-    background: #f5f1e8;
+    background: #1b1b1b;
     overflow: hidden;
     height: 100vh;
     display: flex;
@@ -44,6 +44,7 @@ body {
     top: 0;
     left: 0;
     transform-style: preserve-3d;
+    backface-visibility: hidden; 
 }
 
 .front-cover {
@@ -56,20 +57,25 @@ body {
     transition: transform 1.5s ease;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: #e8d8c0;
-    padding: 20px;
+    padding: 30px 20px;
     cursor: pointer;
+    overflow: hidden;
+}
+
+.title-container {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
 }
 
 .front-cover h1 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 30px;
+    font-size: 22px;
+    line-height: 1.3;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
+    transform: rotate(0deg); /* Now horizontal */
 }
 
 .back-cover {
@@ -88,12 +94,11 @@ body {
 }
 
 .click-hint {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: auto;
 }
 
 .circle {
@@ -118,7 +123,6 @@ body {
     100% { transform: scale(0.9); opacity: 0.7; }
 }
 
-/* Open book animation */
 .book.open {
     transform: translateX(150px) translateZ(50px);
 }
@@ -127,7 +131,7 @@ body {
     transform: rotateY(-160deg);
 }
 
-/* Zoom animation */
+
 .zoom-out {
     animation: zoomOut 1.5s forwards;
 }
