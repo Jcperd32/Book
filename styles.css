@@ -24,7 +24,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f1e8;
+    background: #1b1b1b;
     z-index: 1000;
     transition: opacity 0.5s ease;
 }
@@ -75,7 +75,7 @@ body {
     font-size: 22px;
     line-height: 1.3;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    transform: rotate(0deg); /* Now horizontal */
+    transform: rotate(0deg); 
 }
 
 .back-cover {
